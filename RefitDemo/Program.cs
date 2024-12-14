@@ -3,8 +3,8 @@ using Refit;
 using RefitDemo;
 
 
-var weatherApi = RestService.For<ICoffeeApi>("https://api.sampleapis.com");
-var response = await weatherApi.GetCoffeeDetailsAsync();
+var coffeeApi = RestService.For<ICoffeeApi>("https://api.sampleapis.com");
+var response = await coffeeApi.GetCoffeeDetailsAsync();
 
 Console.WriteLine($"Coffees");
 foreach (var item in response)
